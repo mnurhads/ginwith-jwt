@@ -26,6 +26,7 @@ func initRouter() *gin.Engine {
 		secured := api.Group("/secured").Use(middlewares.Auth())
 		{
 			secured.GET("/ping-connection", controllers.Ping)
+			secured.GET("/user-all", controllers.GetAllUser)
 		}
 	}
 	return router
