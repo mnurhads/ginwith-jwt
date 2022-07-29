@@ -11,7 +11,8 @@ type User struct {
 	Username	string `json:"username" gorm:"type:varchar(20);unique"`
 	Email		string `json:"email" gorm:"type:varchar(50)"`
 	Password	string `json:"password"`
-	UserStatus  string `json:"userstatus" gorm:type:varchar(10)`
+	UserStatus  string `json:"userstatus" gorm:"type:varchar(10)"`
+	Rule		string `json:"rule" gorm:"type:varchar(10)"`
 }
 
 // declare hash
